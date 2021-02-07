@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Angkringan"
+    android:background="@android:color/white">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/splash"
+            android:layout_centerInParent="true">
+        </ImageView>
+
+        <ImageView
+            android:visibility="gone"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icc_out"
+            android:id="@+id/out"
+            android:layout_alignParentRight="true">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="20dp"
+        android:layout_below="@id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis"></TextView>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_jenis">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kepemilikan"></TextView>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="@drawable/border"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_kepemilikan">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txtLabel2"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Kelompok/Perusahaan"></TextView>
+
+        <EditText
+            android:visibility="gone"
+            android:paddingVertical="10dp"
+            android:hint="Nama Kelompok/Perusahaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaKelompok"></EditText>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txtLabel3"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Person"></TextView>
+
+        <EditText
+            android:visibility="gone"
+            android:paddingVertical="10dp"
+            android:hint="Contact Person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaJuragan"></EditText>
+
+        <TextView
+            android:id="@+id/txtLabel4"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No. HP Contact Person"></TextView>
+
+        <EditText
+            android:visibility="gone"
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:hint="No. HP Contact Person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNohpjuaragan"></EditText>
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Penjual"></TextView>
+
+        <EditText
+            android:paddingVertical="10dp"
+            android:hint="Nama Penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaPenjual"></EditText>
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Kontak (WA) Penjual"></TextView>
+
+        <EditText
+            android:inputType="number"
+            android:paddingVertical="10dp"
+            android:hint="Nomor Kontak (WA) Penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNohp"></EditText>
+
+        <LinearLayout
+            android:id="@+id/blockAlamat"
+            android:onClick="alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"></TextView>
+
+            <TextView
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:hint="Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAlamat"></TextView>
+
+            <View
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E46C757D"></View>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terima titipan makanan/minuman?"
+            android:textColor="@color/colorPrimaryDark"></TextView>
+
+        <RadioGroup
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockTitipanMakanan"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdYa"
+                android:text="Ya"></RadioButton>
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdTidak"
+                android:text="Tidak"></RadioButton>
+
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Butuh bantuan jenis?"
+            android:textColor="@color/colorPrimaryDark"></TextView>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockBantuan"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:onClick="blockBantuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdsupply"
+                android:text="Supply Barang"></CheckBox>
+
+            <CheckBox
+                android:onClick="blockBantuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdModal"
+                android:text="Tambah Modal"></CheckBox>
+
+            <CheckBox
+                android:onClick="blockBantuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdPemasaran"
+                android:text="Pemasaran"></CheckBox>
+
+            <CheckBox
+                android:onClick="blockBantuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdlain"
+                android:text="Lain-lain"></CheckBox>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Foto"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="8dp"></TextView>
+
+        <Button
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pilihFoto"
+            android:text="Pilih Foto"
+            android:background="@drawable/half_radius_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="false"></Button>
+
+        <HorizontalScrollView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:id="@+id/blockFoto"></LinearLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSimpan"
+            android:text="Simpan"
+            android:background="@drawable/half_radius_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"></Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockFooter"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/home">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_home">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@android:color/black"
+                android:textAlignment="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/order">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_order">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order"
+                android:textColor="@android:color/black"
+                android:textAlignment="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/pos">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_pos">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Angkringan"
+                android:textColor="@android:color/black"
+                android:textAlignment="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/akun">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_account">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Akun"
+                android:textColor="@android:color/black"
+                android:textAlignment="center">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

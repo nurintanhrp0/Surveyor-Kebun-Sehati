@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_marginHorizontal="10dp">
+
+    <LinearLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logout"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        android:paddingBottom="25dp">
+
+        <TextView
+            android:id="@+id/txtJam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="15 : 20"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Senin, 21 September 2020"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/blockHeader"
+        android:visibility="visible"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockFooter"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:id="@+id/baris1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/pesanan">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_order">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesanan"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invoice"
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:paddingVertical="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_invoice">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tagihan"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/baris2"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/titipjual"
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_titipjual">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Titip Jual"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member"
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_member">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anggota"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/baris3"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/akun">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_account">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akun"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingVertical="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/survei">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_survey">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Survei"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        app:tint="@color/colorPrimaryDark">
+    </ImageView>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNama"
+        android:textColor="@android:color/black"
+        android:text="Nama">
+    </TextView>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTotalNormal"
+        android:textColor="@android:color/black"
+        android:text="Total Normal"
+        android:textSize="13dp"
+        android:layout_alignParentRight="true">
+    </TextView>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/txtTotalNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTotal"
+        android:textColor="@android:color/black"
+        android:text="Total"
+        android:layout_alignParentRight="true">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQty"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/txtNama"
+        android:layout_marginTop="8dp"
+        android:text="1 Item(s)"></TextView>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCatatan"
+        android:layout_below="@id/txtQty"
+        android:layout_marginTop="5dp"
+        android:text=""></TextView>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEdit"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/txtCatatan"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="Edit"></TextView>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkin">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/blockwarning"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:layout_margin="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/red_half_radius_border">
+        
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/warning"
+            android:tint="@android:color/white">
+        </ImageView>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perhatian! Lokasi Anda di luar radius lokasi horeka yang dipilih."></TextView>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+         android:layout_margin="50dp">
+
+        <Button
+            android:background="@drawable/top_half_radius_border"
+            android:id="@+id/btnCheckin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Chekcin"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnCobalagi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_half_radius_border"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Coba Lagi"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white">
+        </Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

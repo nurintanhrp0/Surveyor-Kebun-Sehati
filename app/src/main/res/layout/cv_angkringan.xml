@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaPenjual"
+            android:textColor="@android:color/black">
+        </TextView>
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaJuragan"
+            android:textColor="@android:color/black">
+        </TextView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAlamat"
+            android:textColor="@android:color/black">
+        </TextView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLihatPeta"
+            android:text="Lihat di Peta"
+            android:textColor="@android:color/white"
+            android:background="@drawable/half_radius_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="15dp">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

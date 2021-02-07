@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_invoice">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnKonfirmasi">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockHeader"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/icoBack"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitle"
+                    android:layout_toRightOf="@id/icoBack"
+                    android:layout_marginLeft="20dp"
+                    android:text="Detail Tagihan"
+                    android:textSize="18dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blockHeader"
+                android:background="@android:color/white"
+                android:id="@+id/blockTitle">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNoInvoice"
+                    android:textStyle = "bold"
+                    android:text="INV001">
+                </TextView>
+                <TextView
+                    android:layout_below="@+id/txtNoInvoice"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTotaInvoice"
+                    android:text="Total Tagihan">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNilaiTotal"
+                    android:layout_below="@id/txtTotaInvoice"
+                    android:textSize="20dp"
+                    android:text="Rp 0"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView
+                    android:layout_below="@+id/txtNoInvoice"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtJatuhTempo"
+                    android:layout_alignParentRight="true"
+                    android:text="Jatuh Tempo">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNilaiTempo"
+                    android:layout_below="@id/txtJatuhTempo"
+                    android:layout_alignParentRight="true"
+                    android:textSize="20dp"
+                    android:text="12/02/20"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="5dp"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockDetailProfil"
+                android:layout_below="@id/blockTitle"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitleDetail"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:text="Detail Profil">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvHp"
+                    android:layout_below="@id/tvNama"
+                    android:layout_marginTop="10dp"
+                    android:text="Nomor Handphone">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNohp"
+                    android:layout_below="@id/txtNama"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="08xx"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvEmail"
+                    android:layout_below="@id/tvHp"
+                    android:layout_marginTop="10dp"
+                    android:text="Email">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtEmail"
+                    android:layout_below="@id/txtNohp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="email"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNama"
+                    android:layout_below="@id/txtTitleDetail"
+                    android:layout_marginTop="15dp"
+                    android:text="Nama">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNama"
+                    android:layout_below="@id/txtTitleDetail"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Nama"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockAlamat"
+                android:layout_below="@id/blockDetailProfil"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAlamat"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:text="Alamat">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNamaAlamat"
+                    android:text="Alamat"
+                    android:layout_below="@id/tvAlamat"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtAlamat"
+                    android:text="Alamat"
+                    android:layout_below="@id/txtNamaAlamat"
+                    android:layout_marginTop="5dp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockPembayaran"
+                android:layout_below="@id/blockAlamat"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitlePembayaran"
+                    android:text="Cara Pembayaran"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:layout_alignParentLeft="true" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockPilihanPembayaran"
+                    android:layout_below="@+id/txtTitlePembayaran"
+                    android:layout_marginTop="10dp">
+
+
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockDaftarProduk"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="20dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/blockPembayaran">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDaftarProduk"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:text="Daftar Produk">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_below="@id/tvDaftarProduk"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blocklist"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/list_produk">
+                    </ListView>
+
+                    <ListView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/list_produk2">
+                    </ListView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lainnya"
+                    android:text="Lainnya"
+                    android:layout_below="@id/blocklist"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:background="@drawable/radius_corners"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/lainnya"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/line"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSubtotal"
+                    android:layout_below="@id/line"
+                    android:layout_marginTop="15dp"
+                    android:text="Subtotal">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtSubTotal"
+                    android:layout_below="@id/line"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Rp 0"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPajak"
+                    android:layout_below="@id/tvSubtotal"
+                    android:layout_marginTop="15dp"
+                    android:text="Pajak (10%)">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPajak"
+                    android:layout_below="@id/txtSubTotal"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Rp 0"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBebanOrder"
+                    android:layout_below="@id/tvPajak"
+                    android:layout_marginTop="15dp"
+                    android:text="Beban Order">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBebanOrder"
+                    android:layout_below="@id/txtPajak"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Rp 0"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDiskon"
+                    android:layout_below="@id/tvBebanOrder"
+                    android:layout_marginTop="15dp"
+                    android:text="Diskon">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDiskon"
+                    android:layout_below="@id/txtBebanOrder"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="- Rp 0"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvOngkir"
+                    android:layout_below="@id/tvDiskon"
+                    android:layout_marginTop="15dp"
+                    android:text="Ongkos Kirim">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtOngkir"
+                    android:layout_below="@id/txtDiskon"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Rp 0"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnKonfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="Terima Pembayaran"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"></Button>
+
+
+</RelativeLayout>

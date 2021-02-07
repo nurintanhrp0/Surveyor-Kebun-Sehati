@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Order"
+    android:padding="15dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="@color/abuabumuda"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockSearch">
+
+        <TextView
+            android:imeOptions="actionSearch"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpSearch"
+            android:hint="Cari Apel Malang"
+            android:background="@drawable/edittext_border"
+            android:drawableRight="@drawable/search"
+            android:drawablePadding="6dp"
+            android:padding="10dp"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/blockSearch"
+        android:background="@drawable/radius_corners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockKatgeori">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_below="@id/blockKatgeori"
+        android:id="@+id/blockTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/radius_corners"
+        android:backgroundTint="@color/abuabumuda"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="Nama Produk"
+            android:id="@+id/txtNamaProduk"
+            android:textColor="@android:color/black"
+            android:textSize="16dp">
+        </TextView>
+
+        <TextView
+            android:text="Harga"
+            android:id="@+id/txtHarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:textColor="@android:color/black"
+            android:textSize="16dp">
+        </TextView>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@id/blockTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_produk">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockTotal"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/abuabumuda">
+        </View>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingHorizontal="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTotal"
+            android:text="Total"
+            android:textColor="@android:color/black"
+            android:textSize="15dp">
+        </TextView>
+
+        <TextView
+            android:paddingHorizontal="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTotal"
+            android:id="@+id/txtNilaiTotal"
+            android:text="Rp 0"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"></TextView>
+
+        <Button
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Checkout"
+            android:textAllCaps="false"
+            android:id="@+id/btnCheckout"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:background="@drawable/border"></Button>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

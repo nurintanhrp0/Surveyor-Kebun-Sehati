@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:src="@drawable/splash">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockInput"
+            android:orientation="vertical">
+
+            <EditText
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inpNohp"
+                android:background="@drawable/half_radius_border"
+                android:hint="Nomor HP"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"></EditText>
+
+            <EditText
+                android:singleLine="true"
+                android:maxLength="6"
+                android:padding="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inpPin"
+                android:background="@drawable/half_radius_border"
+                android:hint="PIN"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
+
+            <Button
+                android:paddingHorizontal="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin"
+                android:background="@drawable/half_radius_border"
+                android:text="login"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/blockGagal">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:src="@drawable/icon_ilustrasi_gagal_login"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No.HP atau PIN yang Anda isikan salah"
+                android:textColor="@android:color/holo_red_dark"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <Button
+                android:paddingHorizontal="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCobalagi"
+                android:background="@drawable/half_radius_border"
+                android:text="coba lagi"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+            </Button>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/blockSukses"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="LOGIN SUKSES"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:src="@drawable/icon_ilustrasi_sukses_login"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:text="Silahkan ganti PIN Anda agar mudah diingat"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+            <Button
+                android:paddingHorizontal="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnGantiPIN"
+                android:background="@drawable/half_radius_border"
+                android:text="ganti pin"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+            </Button>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

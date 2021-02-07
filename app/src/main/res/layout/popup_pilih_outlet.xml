@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pilihan_title"
+                android:text="Pilih Alamat"></TextView>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:textAlignment="viewEnd"
+                android:layout_toEndOf="@id/pilihan_title"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tambahAlamat"
+                android:text="+ tambah alamat"></TextView>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pilihan_title"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/pBar"></ProgressBar>
+
+            <LinearLayout
+                android:layout_below="@+id/pilihan_title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockOutlet"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

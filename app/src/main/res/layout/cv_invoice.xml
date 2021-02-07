@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingVertical="15dp">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/icoStatus"
+        android:src="@drawable/belum_lunas">
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockInvoice"
+        android:layout_toRightOf="@id/icoStatus"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTglOrder"
+            android:text="Tanggal"
+            android:textSize="13dp">
+        </TextView>
+
+
+        <TextView
+            android:layout_below="@id/txtTglOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTotal"
+            android:text="Total"
+            android:textSize="20dp"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <TextView
+            android:layout_below="@+id/txtTotal"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTempo"
+            android:text="Jatuh Tempo"
+            android:textSize="14dp">
+
+         </TextView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/txtTempo"
+            android:layout_below="@id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/blockTanggal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_truck"
+                ></ImageView>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTanggal"
+                android:text="Tanggal"
+                android:textSize="14dp"
+                android:textColor="@android:color/holo_green_light">
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

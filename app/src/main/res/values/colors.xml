@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009245</color>
+    <color name="colorPrimaryDark">#CD009245</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="abuabumuda">#e2e2e2</color>
+    <color name="warnaHitamTrans">#33000000</color>
+    <color name="green">#7FC289</color>
+    <color name="abu">#e9ecef</color>
+    <color name="abuabutua">#806C757D</color>
+    <color name="kuningtua">#FFC107</color>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/top_half_radius_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNama"
+            android:textColor="@android:color/black"
+            android:text="Nama"></TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAlamat"
+            android:textColor="@android:color/black"
+            android:text="Alamat"></TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtItem"
+            android:textColor="@android:color/black"
+            android:text="Jumlah Item"></TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStatus"
+            android:textColor="@android:color/black"
+            android:text="Status"></TextView>
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="lihat detail"
+            android:textColor="@android:color/white"
+            android:background="@drawable/half_radius_border"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_gravity="right"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>

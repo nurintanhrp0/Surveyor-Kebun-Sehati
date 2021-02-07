@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="10dp"
+    android:layout_weight="1">
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/thumbnail"></ImageView>
+
+    <TextView
+        android:layout_weight="0.05"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:textSize="14dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/txtKelurahan"
+        android:textColor="@android:color/black"
+        android:text="Kelurahan ">
+    </TextView>
+
+    <TextView
+        android:layout_weight="0.05"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.1"
+        android:src="@drawable/ic_pilih"></ImageView>
+
+</LinearLayout>

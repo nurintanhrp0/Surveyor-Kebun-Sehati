@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailOrder"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_above="@id/blockBawah"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_above="@id/blockBawah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockHeader"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:id="@+id/icoBack"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@id/logo"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitle"
+                    android:layout_toRightOf="@id/icoBack"
+                    android:layout_marginLeft="20dp"
+                    android:text="Detail Transaksi"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/logo"
+                    android:src="@drawable/splash"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/blockIsi"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/blockHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockStatusOrder"
+                    android:padding="10dp"
+                    android:background="@color/colorPrimaryDark">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtStatusOrder"
+                        android:text="Please Wait...."
+                        android:background="@color/colorPrimaryDark"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/lihatposisi"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat Posisi Orderan"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/white"></TextView>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_border"
+                        android:backgroundTint="@android:color/white"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="12dp"
+                        android:id="@+id/reorder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Kembali"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorPrimaryDark"></TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:paddingBottom="10dp"
+                    android:background="#4EE8EAED"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockIDStatus"
+                    android:layout_below="@id/blockStatusOrder"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtIdOrder"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTanggal"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:id="@+id/tvNamaAlamat"
+                        android:layout_below="@id/txtTanggal"
+                        android:text="Nama Horeka"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNamaHoreka"
+                        android:layout_below="@id/tvNamaAlamat"
+                        android:layout_marginHorizontal="10dp"/>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:id="@+id/txtTitleAlamat"
+                        android:layout_below="@id/txtNamaHoreka"
+                        android:text="Alamat Pengiriman"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNamaCabang"
+                        android:layout_below="@id/txtTitleAlamat"
+                        android:layout_marginHorizontal="10dp"/>
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtAlamat"
+                        android:layout_below="@id/txtNamaCabang"
+                        android:layout_marginHorizontal="10dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/abuabumuda"
+                    android:layout_height="3dp"
+                    android:background="@drawable/dash_line"
+                    android:id="@+id/lineAlamat"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/blockIDStatus" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/blockIsi"
+                android:id="@+id/blockList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4EE8EAED">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barisanCart"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </ListView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/blockList"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSubTotal"
+                    android:text="Subtotal">
+                </TextView>
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtSubTotal"
+                    android:text="Subtotal"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSubTotal"
+                    android:id="@+id/tvPajak"
+                    android:text="Pajak">
+                </TextView>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSubTotal"
+                    android:id="@+id/txtPajak"
+                    android:text="Pajak"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtPajak"
+                    android:id="@+id/tvBebanOrder"
+                    android:text="Beban Order">
+                </TextView>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtPajak"
+                    android:id="@+id/txtBebanOrder"
+                    android:text="Beban Order"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtBebanOrder"
+                    android:id="@+id/tvDiskon"
+                    android:text="Diskon">
+                </TextView>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtBebanOrder"
+                    android:id="@+id/txtDiskon"
+                    android:text="Diskon"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDiskon"
+                    android:id="@+id/tvOngkir"
+                    android:text="Ongkir">
+                </TextView>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDiskon"
+                    android:id="@+id/txtOngkir"
+                    android:text="Ongkir"
+                    android:textColor="@android:color/black">
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/blockBawah"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleTotal"
+            android:layout_marginTop="10dp"
+            android:text="Total"
+            android:textSize="12dp"></TextView>
+
+        <TextView
+            android:paddingBottom="8dp"
+            android:layout_below="@id/txtTitleTotal"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTotal"
+            android:text="Total"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"></TextView>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLink"
+            android:text="Tagihan"
+            android:textAllCaps="true"
+            android:textSize="16dp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@android:color/white"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/colorPrimaryDark"></TextView>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTerima"
+        android:text="Sudah Terima Barang?"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

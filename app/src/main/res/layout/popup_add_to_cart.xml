@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/icoClose"
+            android:src="@drawable/close"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTambah"
+            android:layout_toRightOf="@id/icoClose"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Tambahkan Ke Keranjang"
+            android:textSize="18dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:id="@+id/blockProduk"
+        android:layout_below="@id/blockHeader"
+        android:background="@drawable/border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/imgProduk" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNamaProduk"
+            android:layout_toRightOf="@id/imgProduk"
+            android:layout_marginLeft="20dp"
+            android:text="Apel Lokal Hijau"
+            android:textSize="14dp"
+            android:maxLines="2"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBeratProduk"
+            android:layout_toRightOf="@id/imgProduk"
+            android:layout_below="@id/txtNamaProduk"
+            android:layout_marginLeft="20dp"
+            android:text="300 gram"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHargaProduk"
+            android:layout_toRightOf="@id/imgProduk"
+            android:layout_below="@id/txtBeratProduk"
+            android:layout_marginLeft="20dp"
+            android:text="IDR 7.000"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/blockProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockTier"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockQty"
+        android:layout_below="@id/blockTier"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleQty"
+            android:text="Jumlah Pembelian"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_below="@id/txtTitleQty"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:src="@drawable/trash"
+            android:tint="@android:color/holo_red_dark"
+            android:id="@+id/hapus"
+            android:layout_toLeftOf="@id/blockNumberPicker"></ImageView>
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/txtSatuan"
+            android:layout_below="@id/txtTitleQty"
+            android:layout_marginTop="10dp"
+            android:id="@+id/blockNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/radius_corners">
+
+            <TextView
+                android:background="@color/abuabumuda"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:id="@+id/decrement"
+                android:textStyle="bold"
+                android:text="—"/>
+
+            <EditText
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:id="@+id/display"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:background="@color/abuabumuda"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/increment"
+                android:text="+"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radius_corners"
+            android:padding="16dp"
+            android:layout_below="@id/txtTitleQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSatuan"
+            android:text="Satuan"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockCatatan"
+        android:layout_below="@id/blockQty"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleCatatan"
+            android:text="Catatan untuk penjual (optional)"
+            android:textSize="14dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpCatatan"
+            android:layout_below="@id/txtTitleCatatan"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockButton"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBeliPopup"
+            android:text="Beli Sekarang"
+            android:textSize="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
